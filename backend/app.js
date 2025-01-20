@@ -18,6 +18,11 @@ app.use(bodyParser.json());
 // Connect Database
 connectDB();
 
+// Demo Route
+app.get('/hi', (req, res) => {
+    res.json({ message: 'Hello from the backend! 👋' });
+  });
+
 // Routes
 app.use('/api/users', userRoutes);
 
